@@ -1,15 +1,12 @@
 import './style.css'
+import { QuestionLoader } from "./qustionLoader";
+import { AnswerSheetType } from "./qustionLoader";
 
+let answerSheet: AnswerSheetType[] = [{
+  Question : "Sample Question",
+  Answer : "Hey"
+}];
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div id = "Sheet">
-    <H1>Random Question </h1>
-    <input type="text" placeholder="Answer"></input>
-    <br>
-    <button>Previous</button>
-    <button>Check</button>
-    <button>Next</button>
-  </div>
-`
+QuestionLoader(answerSheet,0);
 
 

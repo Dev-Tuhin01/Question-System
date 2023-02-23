@@ -4,8 +4,7 @@ export interface AnswerSheetType{
 }[];
 
 
-export const buttonLoader = (pb:HTMLButtonElement, nb:HTMLButtonElement,index: number, answerSheet:AnswerSheetType[] ) => {
-  
+export const buttonLoader = (pb: HTMLButtonElement, nb: HTMLButtonElement, cb: HTMLButtonElement, ans: HTMLTextAreaElement, index: number, answerSheet: AnswerSheetType[]) => {
   console.log(pb, nb);
   
   pb.addEventListener("click", () => {
@@ -30,6 +29,16 @@ export const buttonLoader = (pb:HTMLButtonElement, nb:HTMLButtonElement,index: n
     }
   });
 
+  cb.addEventListener("click", () => {
+    console.log("checked");
+    
+    if (answerSheet[index].Answer == ans.value) {
+      alert("Right answer");
+    } else {
+      alert("Wrong Answer");
+    }
+  })
+
 }
 
 export function QuestionLoader(AnswerSheet: AnswerSheetType[],Index:number) {
@@ -43,10 +52,12 @@ export function QuestionLoader(AnswerSheet: AnswerSheetType[],Index:number) {
     <button type = "button" id = "next">Next</button>
   </div>
 `
-  const pb:HTMLButtonElement = document.querySelector("#previous")!;
-  const nb:HTMLButtonElement = document.querySelector("#next")!;
+  const previousButton:HTMLButtonElement = document.querySelector("#previous")!;
+  const nextButton:HTMLButtonElement = document.querySelector("#next")!;
+  const checkButton: HTMLButtonElement = document.querySelector("#check")!;
+  const answer: HTMLTextAreaElement = document.querySelector("#answerBox")!;
   
-  buttonLoader(pb, nb, Index, AnswerSheet);
+  buttonLoader(previousButton, nextButton, checkButton, answer, Index, AnswerSheet);
   
   console.log(Index);
 }

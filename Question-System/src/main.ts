@@ -3,20 +3,20 @@ import { QuestionLoader } from "./qustionLoader";
 import { AnswerSheetType } from "./qustionLoader";
 
 let answerSheet: AnswerSheetType[] = [{
-  Question : "Sample Question",
-  Answer : "Hey"
+  Question : "2+2",
+  Answer : "4"
   },
 {
-    Question: "Sample Question 2",
-    Answer:"Bye"
+    Question: "10-3",
+    Answer:"7"
   },
 {
-    Question: "Sample Question 3",
-    Answer:"Tata"
+    Question: "20 * 3",
+    Answer:"60"
   }
 ];
 
-let index: number = 1;
+let index: number = 0;
 
 QuestionLoader(answerSheet, index);
 

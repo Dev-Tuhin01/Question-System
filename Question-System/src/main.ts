@@ -13,7 +13,11 @@ let answerSheet: AnswerSheetType[] = [{
 {
     Question: "20 * 3",
     Answer:"60"
-  }
+  },
+  {
+    Question: "Capital of India?",
+    Answer: "delhi"
+}
 ];
 
 let index: number = 0;

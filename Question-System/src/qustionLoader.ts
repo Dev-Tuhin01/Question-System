@@ -4,7 +4,7 @@ export interface AnswerSheetType{
 }[];
 
 
-export const buttonLoader = (pb: HTMLButtonElement, nb: HTMLButtonElement, cb: HTMLButtonElement, ans: HTMLTextAreaElement, index: number, answerSheet: AnswerSheetType[]) => {
+const buttonLoader = (pb: HTMLButtonElement, nb: HTMLButtonElement, cb: HTMLButtonElement, ans: HTMLTextAreaElement, index: number, answerSheet: AnswerSheetType[]) => {
   console.log(pb, nb);
   
   pb.addEventListener("click", () => {
@@ -32,7 +32,7 @@ export const buttonLoader = (pb: HTMLButtonElement, nb: HTMLButtonElement, cb: H
   cb.addEventListener("click", () => {
     console.log("checked");
     
-    if (answerSheet[index].Answer == ans.value) {
+    if (answerSheet[index].Answer.toLowerCase() == ans.value.toLowerCase()) {
       alert("Right answer");
     } else {
       alert("Wrong Answer");

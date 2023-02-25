@@ -5,8 +5,35 @@ This repository is for my first project in typescript. It is a simple quiz app w
 
 This project is maily build for me to understand Vite, Typescript and FireBase deployment
 
+The project is hosted on : -[https://question-system-d2861.web.app/](https://question-system-d2861.web.app/)
 ## Author
 
 - [@Dev-Tuhin01](https://github.com/Dev-Tuhin01)
 
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Dev-Tuhin01/Question-System
+```
+
+Go to the project directory
+
+```bash
+  cd Question-System
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
 

@@ -16,13 +16,13 @@ The project is hosted on : -[https://question-system-d2861.web.app/](https://que
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/Dev-Tuhin01/Question-System
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd Question-System
 ```
 
 Install dependencies
@@ -34,6 +34,6 @@ Install dependencies
 Start the server
 
 ```bash
-  npm run start
+  npm run dev
 ```
 
